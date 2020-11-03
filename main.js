@@ -8,7 +8,8 @@ const apiKey = '5ed29308b431d4ab2d33d5b101687671';
 
 form.addEventListener('submit',e=>{
 	e.preventDefault();
-	const cityList = document.querySelector('.cities');
+	const rowDiv = document.querySelector('.row')
+	//const cityList = document.querySelector('.cities');
 	const inputValue = document.getElementById('value').value
 	const url =`http://api.openweathermap.org/data/2.5/weather?q=${inputValue}&appid=${apiKey}&units=metric`
 	fetch(url).then(function(response){
@@ -19,8 +20,11 @@ form.addEventListener('submit',e=>{
 		const icon =
 		 `https://openweathermap.org/img/wn/${weather[0]["icon"]}@2x.png`;
 
+		const ul = document.createElement('ul');
 		const listItem = document.createElement('li');
 			listItem.setAttribute('class','city');
+		const colDiv = document.createElement('div');
+			colDiv.setAttribute("class","col-md-6 col-6")
 
 		const listContent =
 		`	<h2 class="city-name" data-name="${name},${sys.country}">
@@ -36,9 +40,10 @@ form.addEventListener('submit',e=>{
 			</figure>
 		`;
 		listItem.innerHTML = listContent;
-		cityList.appendChild(listItem);
+		ul.appendChild(listItem);
+		colDiv.appendChild(ul)
+		rowDiv.appendChild(colDiv);		
 	}).catch(function(){
 		msg.innerHTML = "Enter a valid city";
 	})
 })
- 
