@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Dog Store</title>
+	<title>WEATHER APP</title>
 	<!--<link rel="stylesheet" type="text/css" href="styles.css">-->
 	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
   	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
@@ -13,29 +13,21 @@
 		<div class="title">
 			<h1>WEATHER APP</h1>
 		</div>
-		<div class="notification"></div>
-		<div class="weather-container">
-			<!--<div class="weather-icon">
-				<i class="fa fa-user"></i>
+		<div class="form">
+			<form class="form-group">
+				<div class="form-group">
+					<input class="form-control" type="text" id="value"></input>
+				</div>
+				<button class="btn btn-block btn-primary" id="search" >SEARCH</button>
+				<div class="message">
+					<p class="error-message"></p>
+				</div>
+			</form>
 			</div>
-			<div class="temp-value">
-				<p class="value"><span>Celcius</span></p>
-			</div>
-			<div class="temp-description">
-				<p> - </p>
-			</div>
-			<div class="location"><p>-</p></div>-->
-			<div class="form">
-				<form class="form-group">
-					<div class="form-group">
-						<input class="form-control" type="text" id="value"></input>
-					</div>
-					<button class="btn btn-block btn-primary" id="search" >SEARCH</button>
-				</form>
-			</div>
-			<div class="message"></div>
+		<div class="weather-info">
+			<ul class="cities"></ul>
 		</div>
 	</div>
-	<script src="main.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
