@@ -9,13 +9,11 @@ const apiKey = '5ed29308b431d4ab2d33d5b101687671';
 form.addEventListener('submit',e=>{
 	e.preventDefault();
 	const rowDiv = document.querySelector('.row')
-	//const cityList = document.querySelector('.cities');
 	const inputValue = document.getElementById('value').value
 	const url =`http://api.openweathermap.org/data/2.5/weather?q=${inputValue}&appid=${apiKey}&units=metric`
 	fetch(url).then(function(response){
 		return response.json()
 	}).then(function(data){
-		console.log(data);
 		const {main, name, sys, weather} = data;
 		const icon =
 		 `https://openweathermap.org/img/wn/${weather[0]["icon"]}@2x.png`;
@@ -24,25 +22,27 @@ form.addEventListener('submit',e=>{
 		const listItem = document.createElement('li');
 			listItem.setAttribute('class','city');
 		const colDiv = document.createElement('div');
-			colDiv.setAttribute("class","col-md-6 col-6")
-
+			colDiv.setAttribute("class","col-6 col-md-2 col-sm-4 col-xs-6 weather-card")
+			//col-6 col-md-2 col-sm-4 col-xs-6
 		const listContent =
 		`	<h2 class="city-name" data-name="${name},${sys.country}">
 				<span>${name}</span>
-				<sup>${sys.country}</sup>
 			</h2>
 			<div class="temp">
 				${Math.round(main.temp)}<sup>°C</sup>
 			</div>
 			<figure>
 				<img class="city-icon" src="${icon}" alt="${weather[0]["main"]}">
-				<figcaption>${weather[0]["description"]}</figcaption>
+				<figcaption><h5>${weather[0]["description"]}</h5></figcaption>
 			</figure>
 		`;
 		listItem.innerHTML = listContent;
 		ul.appendChild(listItem);
-		colDiv.appendChild(ul)
-		rowDiv.appendChild(colDiv);		
+		colDiv.appendChild(ul);
+		rowDiv.appendChild(colDiv);	
+		msg.innerHTML = "";
+		form.reset();
+		//input.focus();	
 	}).catch(function(){
 		msg.innerHTML = "Enter a valid city";
 	})
