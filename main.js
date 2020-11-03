@@ -10,7 +10,7 @@ form.addEventListener('submit',e=>{
 	e.preventDefault();
 	const rowDiv = document.querySelector('.row')
 	const inputValue = document.getElementById('value').value
-	const url =`http://api.openweathermap.org/data/2.5/weather?q=${inputValue}&appid=${apiKey}&units=metric`
+	const url =`https://api.openweathermap.org/data/2.5/weather?q=${inputValue}&appid=${apiKey}&units=metric`
 	fetch(url).then(function(response){
 		return response.json()
 	}).then(function(data){
