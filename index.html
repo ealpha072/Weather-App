@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 	<title>Dog Store</title>
-	<link rel="stylesheet" type="text/css" href="styles.css">
+	<!--<link rel="stylesheet" type="text/css" href="styles.css">-->
 	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
   	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-  	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  	<!--<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">-->
 </head>
 <body>
 	<div class="container">
@@ -15,14 +15,25 @@
 		</div>
 		<div class="notification"></div>
 		<div class="weather-container">
-			<div class="weather-icon"></div>
+			<!--<div class="weather-icon">
+				<i class="fa fa-user"></i>
+			</div>
 			<div class="temp-value">
 				<p class="value"><span>Celcius</span></p>
 			</div>
 			<div class="temp-description">
 				<p> - </p>
 			</div>
-			<div class="location"><p>-</p></div>
+			<div class="location"><p>-</p></div>-->
+			<div class="form">
+				<form class="form-group">
+					<div class="form-group">
+						<input class="form-control" type="text" id="value"></input>
+					</div>
+					<button class="btn btn-block btn-primary" id="search" >SEARCH</button>
+				</form>
+			</div>
+			<div class="message"></div>
 		</div>
 	</div>
 	<script src="main.js"></script>
