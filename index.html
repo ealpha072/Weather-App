@@ -3,22 +3,23 @@
 <head>
 	<title>WEATHER APP</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
-	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+	<meta charset="utf-8">
   	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
 	<div class="container">
 		<div class="title">
-			<h1>WEATHER APP</h1>
+			<h1 class="text-center">WEATHER APP</h1>
 		</div>
-		<div class="form">
-			<form class="form-group">
+		<div class="text-center form">
+			<form class="form">
 				<div class="form-group">
-					<input class="form-control" type="text" id="value" placeholder="Search for a city...">
+
+					<input class="form-control" type="text" id="value" placeholder="Search for a city..." autofocus="">
 				</div>
-				<button class="btn btn-block btn-primary" id="search" >SEARCH</button>
+				<button class="btn btn-success mb-2" id="search" >SEARCH</button>
 				<div class="message">
 					<p class="error-message"></p>
 				</div>
@@ -26,13 +27,14 @@
 			</div>
 		<div class="weather-info">
 			<div class="row">
-				
 				<!--<div class="col-6 col-md-4">
 					<ul class="cities"></ul>
 				</div>-->
 			</div>
+			
 		</div>
 	</div>
 <script src="main.js"></script>
 </body>
 </html>
+
