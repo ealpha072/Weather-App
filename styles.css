@@ -1,0 +1,16 @@
+li{
+    list-style-type: none
+}
+
+.weather-info{
+    margin-top:50px;
+}
+
+.form button{
+    height:60px;
+    font-size:xx-large;
+}
+.form input{
+    height:60px;
+    font-size:xx-large;
+}
