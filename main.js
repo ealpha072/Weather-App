@@ -20,12 +20,23 @@ form.addEventListener('submit',e=>{
 		 `https://openweathermap.org/img/wn/${weather[0]["icon"]}@2x.png`;
 
 		const listItem = document.createElement('li');
-			listItem.setAttribute('class':'city');
+			listItem.setAttribute('class','city');
 
-		const content =`
-			<h2 class='text-center'></h2>
-
-		`
+		const listContent =
+		`	<h2 class="city-name" data-name="${name},${sys.country}">
+				<span>${name}</span>
+				<sup>${sys.country}</sup>
+			</h2>
+			<div class="temp">
+				${Math.round(main.temp)}<sup>°C</sup>
+			</div>
+			<figure>
+				<img class="city-icon" src="${icon}" alt="${weather[0]["main"]}">
+				<figcaption>${weather[0]["description"]}</figcaption>
+			</figure>
+		`;
+		listItem.innerHTML = listContent;
+		cityList.appendChild(listItem);
 	}).catch(function(){
 		msg.innerHTML = "Enter a valid city";
 	})
