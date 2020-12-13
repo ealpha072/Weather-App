@@ -9,4 +9,5 @@ In this project, i build a weather app that can be used to tell wetaher of a giv
 ## To do:
   * Create a logic preventing multiple cities from being displayed
   * Styling the weather cards more
-Live project ---> https://ealpha072.github.io/weather-app/
+
+### Live project ---> https://ealpha072.github.io/weather-app/
