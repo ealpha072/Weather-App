@@ -39,7 +39,7 @@ $(function(){
 			const {main, name, sys, weather} = data
 			const icon = `https://openweathermap.org/img/wn/${weather[0]["icon"]}@2x.png`
 
-			let card = `<div class="card col-lg-2 mb-2">
+			let card = `<div class="card col-lg-2 col-md-3 col-sm-4 col-6 mb-2 ">
 				<div class="card-title">
 					<h4 class="city-name">${name +', '+sys.country}</h4>
 				</div>
