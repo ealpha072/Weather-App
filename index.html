@@ -1,45 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<title>WEATHER APP</title>
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-	<meta charset="utf-8">
-  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-</head>
-<body>
-	<div class="container">
-		<div class="title">
-			<h1 class="text-center">WEATHER APP</h1>
-		</div>
-		<div class="text-center form">
-			<form class="form">
-				<div class="form-group">
-					<input class="form-control" type="text" id="value" placeholder="Search for a city..." autofocus="">
+	<head>
+		<title>WEATHER APP</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="card">
+				<div class="card-header">
+					<div class="header-text pull-left"><h4>Weather App</h4></div>
+					<div class="header-buttons pull-right">
+						<buttons class="btn btn-primary btn-sm">Dark Mode</buttons>
+					</div>
 				</div>
-				<button class="btn btn-success mb-2" id="search" >SEARCH</button>
-				<div class="message">
-					<p class="error-message"></p>
+				<div class="card-body">
+					<div class="card mb-10">
+						<div class="card-body">
+							<form action="" method="" class="form-inline">
+								<label for="">City Name</label>
+								<input type="text" class="form-control form-control-sm" placeholder="City Name">
+								<button class="btn btn-success btn-sm ml-2">Search</button>
+							</form>
+						</div>
+					</div>
+					<div class="card mt-10">
+						<div class="card-header">
+							<h4>Weather Info</h4>
+						</div>
+						<div class="card-body" id="search-results">
+
+						</div>
+					</div>
 				</div>
-			</form>
 			</div>
-		<div class="weather-info">
-			<div class="row">
-				<!--<div class="col-6 col-md-4">
-					<ul class="cities"></ul>
-				</div>-->
-			</div>
-			
 		</div>
-	</div>
-<script src="main.js"></script>
-</body>
+		
+		<script src="main.js"></script>
+	</body>
 </html>
 
-<div class="card col">
-	<div class="card-header"></div>
-	<div class="card-body"></div>
-	<div class="card-footer"></div>
-</div>
+
 
