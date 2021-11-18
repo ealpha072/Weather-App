@@ -10,6 +10,6 @@ In this project, i built a weather app that can be used to find weather infomati
 
 ## To do:
   * Create a logic preventing multiple cities from being displayed
-  * Styling the weather cards more
+  * Error div hide on autofocus
 
 ### Live project ---> https://ealpha072.github.io/weather-app
