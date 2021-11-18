@@ -35,9 +35,27 @@ $(function(){
 		fetch(url).then((response)=>{
 			return response.json()
 		}).then(data=>{
-			
+			console.log(data)
+			const {main, name, sys, weather} = data
+			const icon = `https://openweathermap.org/img/wn/${weather[0]["icon"]}@2x.png`
+
+			let card = `<div class="card col-lg-2 mb-2">
+				<div class="card-title">
+					<h4 class="city-name">${name +', '+sys.country}</h4>
+				</div>
+				<div class="card-body">
+					<h6>${Math.round(main.temp)}<sup>°C</sup></h6>
+					<figure>
+						<img src="${icon}" alt="${weather[0]["main"]}">
+						<figcaption>
+							${weather[0]["description"]}
+						</figcaption>
+					</figure>
+				</div>
+			</div>`
+			resultsHolder.append(card)
 		}).catch(()=>{
-			$('.error-div').html()
+			$('.error-div').html('<h6 class="text-danger">Enter a valid city name</h6>')
 		})
 	})
 })
