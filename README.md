@@ -12,4 +12,4 @@ In this project, i built a weather app that can be used to find weather infomati
   * Create a logic preventing multiple cities from being displayed
   * Error div hide on autofocus
 
-### Live project ---> https://ealpha072.github.io/weather-app
+### Live project ---> https://ealpha072.github.io/Weather-App/
