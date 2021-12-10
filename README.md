@@ -11,6 +11,6 @@ In this project, i built a weather app that can be used to find weather infomati
 ## To do:
   * Create a logic preventing multiple cities from being displayed
   * Error div hide on search bar focus
-  * Spacing divs...
+
 
 ### Live project ---> https://ealpha072.github.io/Weather-App/
