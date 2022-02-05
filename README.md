@@ -6,7 +6,7 @@ In this project, i built a weather app that can be used to find weather infomati
 * Working with weather API's and API keys
 * Sending requests with fetch() and .then
 * Handling responses from requests.
-* Apllication logic
+* Apllication logic.
 
 
 
